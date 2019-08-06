@@ -2,11 +2,8 @@ const app = require('./app');
 const { PORT, PROD_URL } = require('./config');
 const mongoose = require('mongoose');
 
-// mongoose.connect(PROD_URL, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
-
-// let db = mongoose.connection;
 
 let server;
 

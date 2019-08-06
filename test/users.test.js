@@ -13,8 +13,8 @@ const app = require('../src/app');
 chai.use(chaiHttp);
 
 function tearDownDb() {
-  return new Promise((resolve,reject) => {
-    console.warn('~~~~~ Deleting Database ~~~~~~~');
+  return new Promise((resolve, reject) => {
+    console.warn('~~~~~~ Deleting Database ~~~~~~~');
     User.collection.drop()
       .then(res => resolve(res))
       .catch(err => reject(err))
