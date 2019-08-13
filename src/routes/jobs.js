@@ -65,6 +65,18 @@ jobsRouter.patch('/:_id', jsonBodyParser, (req, res, next) => {
   });
 });
 
+jobsRouter.get('/:_id', requireAuth, (req, res, next) => {
+  const { _id } = req.params;
+
+  Job.findOne({ _id }, (err, doc) => {
+    if (err) {
+      res.status(400).json({ error: 'no job at that id'})
+    } else {
+      res.status(200).json(doc);
+    }
+  })
+})
+
 jobsRouter.delete('/:_id', requireAuth, (req, res, next) => {
   const { _id } = req.params;
 
