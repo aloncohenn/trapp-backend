@@ -1,8 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const faker = require('faker');
-const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
 const should = chai.should();
