@@ -131,22 +131,4 @@ describe(`TrApp Job Tests`, () => {
       });
     });
   });
-
-  // describe('POST endpoints', () => {
-  //   it('should register a new user', () => {
-  //     let newUser = new User({
-  //       email: "testuser@test.com",
-  //       username: "testuser1"
-  //     });
-  //     newUser.password = newUser.generateHash("123Password#")
-
-  //     return chai.request(app).post('/api/users/signup').send(newUser)
-  //       .then(res => {
-  //         res.should.have.status(201);
-  //         res.should.be.json;
-  //         res.body.should.be.a('object');
-  //         newUser.validPassword("123Password#").should.equal(true);
-  //       })
-  //   })
-  // })
 });
