@@ -47,7 +47,7 @@ jobsRouter.post('/newjob', requireAuth, jsonBodyParser, (req, res, next) => {
 
   newJob.save((err, doc) => {
     if (err) {
-      res.status(401).json({ error: 'error' });
+      res.status(401).json({ error: `error ${err}` });
     } else {
       res.status(201).json(doc);
     }
